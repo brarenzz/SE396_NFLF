@@ -4,7 +4,7 @@
     <meta charset="utf-8">
   </head>
   <body>
-  <?php include "header.php" ?>
+  <?php include "header_index.php" ?>
     <div id="myCarousel" class="carousel side container" data-ride="carousel">
       <ol class="carousel-indecator">
         <li></li>

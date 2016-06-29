@@ -1,6 +1,6 @@
 <?php
 include("configDb.php");
-include("header.php");
+include("header_index.php");
 
 	 $id_edite =$_GET ['id_edite'];
 	 $topic = $_POST['topic'];
@@ -14,7 +14,12 @@ include("header.php");
 
 
 
-$sqlUpdate = "UPDATE news SET topic= '$topic', detail= '$detail', picture='$picture' WHERE feedid = '$id_edite'";
+
+if($picture==''){
+	$sqlUpdate = "UPDATE news SET topic= '$topic', detail= '$detail' WHERE feedid = '$id_edite'";
+	}else{
+		$sqlUpdate = "UPDATE news SET topic= '$topic', detail= '$detail', picture='$picture' WHERE feedid = '$id_edite'";
+	}
 mysqli_query($conn,$sqlUpdate);
 
 echo "<script>alert('แก้ไขข้อมูลเรียบร้อยแล้ว')</script>";

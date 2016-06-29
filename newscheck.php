@@ -7,7 +7,7 @@
 </head>
 <body>
 <?php include("configDb.php") ?>
-<?php include("header.php") ?>
+<?php include("header_index.php") ?>
 <style type="text/css">
 
   .frm-news{ /*class with dot*/
@@ -37,7 +37,7 @@
     margin: 20px auto 10px auto; /*up right down left (in order)*/
     padding: 30px;
     border: 2px solid #999999;
-
+}
 </style>
 
 

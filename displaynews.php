@@ -7,7 +7,7 @@
 </head>
 <body>
 <?php include("configDb.php") ?>
-<?php include("header.php") ?>
+<?php include("header_index.php") ?>
 <style type="text/css">
 
   .insert-picture-box{

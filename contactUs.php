@@ -6,7 +6,7 @@
 
 </head>
   <body>
-    <?php include "header.php" ?>
+    <?php include "header_index.php" ?>
     <style type="text/css">
 		.frm-contact{
       width: 60%;
@@ -24,9 +24,9 @@
           <br>
           <input type="email" name="email" size="19" placeholder="จดหมายอิเล็กทรอนิกส์ติดต่อ" style="width:50%"><br>
           <br>
-          <textarea rows="9" name="message" cols="30" style="width:50%"> </textarea><br>
+          <textarea rows="9" name="message" cols="30" placeholder="ข้อความของท่าน" style="width:50%"> </textarea><br>
           <br>
-          <input type="submit" value="Submit" name="submit" class="btn btn-success" placeholder="ข้อความของท่าน">
+          <input type="submit" value="Submit" name="submit" class="btn btn-success">
       </form>
       </div>
     </body>

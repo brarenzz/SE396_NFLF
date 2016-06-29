@@ -2,7 +2,7 @@
 
 if(isset($_POST['submit'])) {
 
-$to = "bbb@nflf.com";
+$to = "b@localhost.com";
 $subject = "Contact";
 $name_field = $_POST['name'];
 $email_field = $_POST['email'];
