@@ -4,13 +4,9 @@
     <meta charset="utf-8">
   </head>
   <body>
-  <?php include "header.php" ?>
-    <div id="myCarousel" class="carousel side container" data-ride="carousel">
-      <ol class="carousel-indecator">
-        <li></li>
-        <li></li>
-      </ol>
-    </div>
+
+  <?php include "header_index.php" ?>
+      <?php include("show_Calendar.php") ?>
     <div>
     </div>
   </body>

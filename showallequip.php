@@ -6,11 +6,11 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 </head>
 <body>
-<?php include("configDb.php") ?>
-<?php include("header_index.php") ?>
+  <?php include ("header_index.php"); ?>
+  <?php include ("configDb.php"); ?>
 <style type="text/css">
 
-  .frm-news{ /*class with dot*/
+  .frm-equip{ /*class with dot*/
     width: 700px;
     height: auto;
     background-color: #d9edf7;
@@ -30,46 +30,72 @@
     background-color: #fff;
 
   }
-  .frm-displaynews{
+  .frm-displayequip{
     width: 700px;
     height: auto;
     background-color: #d9edf7;
     margin: 20px auto 10px auto; /*up right down left (in order)*/
     padding: 30px;
     border: 2px solid #999999;
-}
+
 </style>
 
-
-<div class="frm-displaynews" >
+<div class="frm-equip" >
 <form name="formdisplay" enctype="multipart/form-data">
  <label for="display">ข่าว</label>&nbsp;
 <table width="75%" border="0" cellspacing="8" cellpadding="8">
   <tr>
+    <td>รหัสอุปกรณ์</td>
     <td>รูปภาพ</td>
-    <td>หัวข้อข่าว</td>
-    <td>วันที่เพิ่มข่าว</td>
+    <td>ชื่อุปกรณ์</td>
+    <td>ห้องปฎิบัติการณ์</td>
+    <td>จำนวน</td>
+    <td>สถานะ</td>
+    <td>วันที่เพิ่มอุปกรณ์</td>
   </tr>
   <?php
-    $sqlSelect = "SELECT * FROM news";
+
+
+
+    $sqlSelect = "SELECT * FROM equip ";
     $result = mysqli_query($conn,$sqlSelect);
     while($row = mysqli_fetch_array($result)){
 
-      $topic = $row['topic'];
-      $date = $row['dates'];
-      $picture = $row['picture'];
+      $equipno = $row['equipno'];
+      $dayequip = $row['dayequip'];
+      $equippic = $row['equippic'];
+      $quantity= $row['quantity'];
+      $equipID= $row['equipID'];
+      $labroom= $row['labroom'];
+      $equipstate= $row['equipstate'];
+      $equipname=$row['equipname'];
       /////////////////////////////////////////////////////////////////////////////////
       /////////////////////////////////////////////////////////////////////////////////
   ?>
 
   <tr>
+  <td><?php echo $equipno ?></td>
   <td>
-   <img src='myfile/<?php echo $picture ?>' height="100" width="100">
+   <img src='equip/<?php echo $equippic ?>' height="100" width="100">
   </td>
-<?php
-  echo " <td ><a href=\"readnews.php?id_edite=$row[feedid]\">$topic</a></td>";
-?>
-  <td><?php echo $date ?></td>
+  <td><?php echo $equipname ?></td>
+  <td><?php echo $labroom ?></td>
+  <td><?php echo $quantity ?></td>
+     <td><?php
+      if($equipstate==''){
+        echo "ไม่ได้รับการระบุ";
+      }
+      if($equipstate=='1'){
+        echo "อนุญาติ";
+      }
+      if($equipstate=='2'){
+        echo "ไม่อนุญาติ";
+      }
+
+           ?></td>
+  <td><?php echo $dayequip ?></td>
+
+
 
   </tr>
   <?php } ?>

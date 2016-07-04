@@ -1,6 +1,6 @@
 <?php
  include("configDb.php");
-include("header.php");
+include("header_index.php");
 
 $topic = $_POST['topic'];
 $detail = $_POST['detail'];
