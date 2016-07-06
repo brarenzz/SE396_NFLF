@@ -71,6 +71,7 @@
     </table>
     <input type="file" name="equippic">
     <input type="submit" value="submit" name="submit" id="submit">
+    /*ควรมีการบันทึกด้วยว่า ใครเป็นผู้ทำการกรอกข้อมูลและบันทึกลงฐานข้อมูลวันไหน*/
 </form>
 
 
