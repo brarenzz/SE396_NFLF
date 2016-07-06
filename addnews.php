@@ -83,6 +83,7 @@
         </table>
         <br><input type="file" name="picture">
         <br><input type="submit" value="submit" name="submit" id="submit" class="btn btn-success">
+        
     </form>
     </div>
   </div>
